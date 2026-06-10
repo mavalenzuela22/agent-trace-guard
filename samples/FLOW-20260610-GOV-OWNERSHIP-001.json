@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "dev-foundry.agent-execution-trace-audit-trail@1",
+  "flowId": "FLOW-20260610-GOV-OWNERSHIP-001",
+  "architecture": "hub-and-spoke",
+  "userRequest": "Ask Governance whether Code Author may update docs/80-operations/OPS-001-runtime-model.md",
+  "status": "BLOCKED",
+  "mode": "Understanding",
+  "selectedMtp": "not_applicable",
+  "selectedMt": "not_applicable",
+  "events": [
+    {
+      "agent": "Dev Foundry Governance Agent",
+      "action": "ownership-decision",
+      "result": "BLOCKED",
+      "scope": {
+        "target": "docs/80-operations/OPS-001-runtime-model.md",
+        "artifactClass": "OPS",
+        "allowedForCodeAuthor": [],
+        "allowedForSourceOfTruthAuthor": [
+          "docs/80-operations/OPS-001-runtime-model.md"
+        ]
+      },
+      "filesInspected": [],
+      "filesTouched": [],
+      "evidence": [
+        "Path docs/80-operations/ and prefix OPS- indicate governed OPS artifact; must be edited by Source-of-Truth Author."
+      ],
+      "warnings": []
+    }
+  ],
+  "artifacts": {
+    "touched": [],
+    "referenced": [
+      "docs/80-operations/OPS-001-runtime-model.md"
+    ]
+  },
+  "checks": {
+    "hubAndSpokeRespected": true,
+    "sourceOfTruthFirst": true,
+    "governanceBeforeExecution": true,
+    "boundedScope": true,
+    "evidenceRecorded": true,
+    "repoWideFallbackAttempted": false,
+    "needsScopeExpansion": false
+  },
+  "limitations": [
+    "Governance-only ownership decision; no repository inspection performed."
+  ]
+}
